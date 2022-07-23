@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head'); %>
+
+<body class="container">
+    <%- include('../partials/header'); %>
+    <main>
+        <div class="jumbotron">
+            <h1>Node com EJS</h1>
+            <p>Vamos aprender a trabalhar com arquivos EJS</p>
+        </div>
+        <ul>
+            <% tools.forEach(tool => { %>
+                <li><strong><%= tool.firstLetter %></strong><%= tool.message.substring(1,tool.message.length) %></li>   
+            <% }) %>
+        </ul>
+    </main>
+    <%- include('../partials/footer'); %>
+</body>
+</html>
